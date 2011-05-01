@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  placa: MyString
+  equipo: MyString
+  ano: 1
+  denominacion: MyString
+  central_id: 1
+  usuario_id: 1
+
+two:
+  placa: MyString
+  equipo: MyString
+  ano: 1
+  denominacion: MyString
+  central_id: 1
+  usuario_id: 1

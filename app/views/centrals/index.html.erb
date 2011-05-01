@@ -1,0 +1,23 @@
+<h1>Listing centrals</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @centrals.each do |central| %>
+  <tr>
+    <td><%= central.nombre %></td>
+    <td><%= link_to 'Show', central %></td>
+    <td><%= link_to 'Edit', edit_central_path(central) %></td>
+    <td><%= link_to 'Destroy', central, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Central', new_central_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nro planilla:</b>
+  <%= @correctivo.nro_planilla %>
+</p>
+
+<p>
+  <b>Aviso:</b>
+  <%= @correctivo.aviso_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_correctivo_path(@correctivo) %> |
+<%= link_to 'Back', correctivos_path %>

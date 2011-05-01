@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Serial:</b>
+  <%= @repuesto.serial %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @repuesto.nombre %>
+</p>
+
+<p>
+  <b>F compra:</b>
+  <%= @repuesto.f_compra %>
+</p>
+
+<p>
+  <b>Unitario:</b>
+  <%= @repuesto.unitario %>
+</p>
+
+<p>
+  <b>Cantidad:</b>
+  <%= @repuesto.cantidad %>
+</p>
+
+<p>
+  <b>Precio:</b>
+  <%= @repuesto.precio %>
+</p>
+
+<p>
+  <b>Vehiculo:</b>
+  <%= @repuesto.vehiculo_id %>
+</p>
+
+<p>
+  <b>Correctivo:</b>
+  <%= @repuesto.correctivo_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_repuesto_path(@repuesto) %> |
+<%= link_to 'Back', repuestos_path %>

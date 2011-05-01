@@ -1,0 +1,49 @@
+<%= form_for(@repuesto) do |f| %>
+  <% if @repuesto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@repuesto.errors.count, "error") %> prohibited this repuesto from being saved:</h2>
+
+      <ul>
+      <% @repuesto.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :serial %><br />
+    <%= f.text_field :serial %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :f_compra %><br />
+    <%= f.datetime_select :f_compra %>
+  </div>
+    <div class="field">
+    <%= f.label :unitario %><br />
+    <%= f.check_box :unitario %>
+  </div>
+  <div class="field">
+    <%= f.label :cantidad %><br />
+    <%= f.text_field :cantidad %>
+  </div>
+  <div class="field">
+    <%= f.label :precio %><br />
+    <%= f.text_field :precio %>
+  </div>
+  <div class="field">
+    <%= f.label :vehiculo_id %><br />
+    <%= f.text_field :vehiculo_id %>
+  </div>
+  <div class="field">
+    <%= f.label :correctivo_id %><br />
+    <%= f.text_field :correctivo_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

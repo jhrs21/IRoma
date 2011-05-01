@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @tipo_mant.tipo %>
+</p>
+
+<p>
+  <b>Preventivo:</b>
+  <%= @tipo_mant.preventivo_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipo_mant_path(@tipo_mant) %> |
+<%= link_to 'Back', tipo_mants_path %>

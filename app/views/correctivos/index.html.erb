@@ -1,0 +1,25 @@
+<h1>Listing correctivos</h1>
+
+<table>
+  <tr>
+    <th>Nro planilla</th>
+    <th>Aviso</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @correctivos.each do |correctivo| %>
+  <tr>
+    <td><%= correctivo.nro_planilla %></td>
+    <td><%= correctivo.aviso_id %></td>
+    <td><%= link_to 'Show', correctivo %></td>
+    <td><%= link_to 'Edit', edit_correctivo_path(correctivo) %></td>
+    <td><%= link_to 'Destroy', correctivo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Correctivo', new_correctivo_path %>

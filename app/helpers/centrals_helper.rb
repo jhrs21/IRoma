@@ -1,0 +1,2 @@
+module CentralsHelper
+end

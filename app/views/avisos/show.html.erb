@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nro aviso:</b>
+  <%= @aviso.nro_aviso %>
+</p>
+
+<p>
+  <b>F creacion:</b>
+  <%= @aviso.f_creacion %>
+</p>
+
+<p>
+  <b>F cierre:</b>
+  <%= @aviso.f_cierre %>
+</p>
+
+<p>
+  <b>Vehiculo:</b>
+  <%= @aviso.vehiculo_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_aviso_path(@aviso) %> |
+<%= link_to 'Back', avisos_path %>

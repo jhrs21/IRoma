@@ -1,0 +1,25 @@
+<%= form_for(@correctivo) do |f| %>
+  <% if @correctivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@correctivo.errors.count, "error") %> prohibited this correctivo from being saved:</h2>
+
+      <ul>
+      <% @correctivo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nro_planilla %><br />
+    <%= f.text_field :nro_planilla %>
+  </div>
+  <div class="field">
+    <%= f.label :aviso_id %><br />
+    <%= f.text_field :aviso_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

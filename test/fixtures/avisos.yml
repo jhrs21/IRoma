@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nro_aviso: 1
+  f_creacion: 2011-04-18 13:33:41
+  f_cierre: 2011-04-18 13:33:41
+  vehiculo_id: 1
+
+two:
+  nro_aviso: 1
+  f_creacion: 2011-04-18 13:33:41
+  f_cierre: 2011-04-18 13:33:41
+  vehiculo_id: 1

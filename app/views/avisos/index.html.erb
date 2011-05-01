@@ -1,0 +1,29 @@
+<h1>Listing avisos</h1>
+
+<table>
+  <tr>
+    <th>Nro aviso</th>
+    <th>F creacion</th>
+    <th>F cierre</th>
+    <th>Vehiculo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @avisos.each do |aviso| %>
+  <tr>
+    <td><%= aviso.nro_aviso %></td>
+    <td><%= aviso.f_creacion %></td>
+    <td><%= aviso.f_cierre %></td>
+    <td><%= aviso.vehiculo_id %></td>
+    <td><%= link_to 'Show', aviso %></td>
+    <td><%= link_to 'Edit', edit_aviso_path(aviso) %></td>
+    <td><%= link_to 'Destroy', aviso, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Aviso', new_aviso_path %>

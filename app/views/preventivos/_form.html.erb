@@ -1,0 +1,33 @@
+<%= form_for(@preventivo) do |f| %>
+  <% if @preventivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@preventivo.errors.count, "error") %> prohibited this preventivo from being saved:</h2>
+
+      <ul>
+      <% @preventivo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nro_planilla %><br />
+    <%= f.text_field :nro_planilla %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :aviso_id %><br />
+    <%= f.text_field :aviso_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

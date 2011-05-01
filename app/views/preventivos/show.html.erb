@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nro planilla:</b>
+  <%= @preventivo.nro_planilla %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @preventivo.tipo %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @preventivo.descripcion %>
+</p>
+
+<p>
+  <b>Aviso:</b>
+  <%= @preventivo.aviso_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_preventivo_path(@preventivo) %> |
+<%= link_to 'Back', preventivos_path %>

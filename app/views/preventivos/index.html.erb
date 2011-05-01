@@ -1,0 +1,29 @@
+<h1>Listing preventivos</h1>
+
+<table>
+  <tr>
+    <th>Nro planilla</th>
+    <th>Tipo</th>
+    <th>Descripcion</th>
+    <th>Aviso</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @preventivos.each do |preventivo| %>
+  <tr>
+    <td><%= preventivo.nro_planilla %></td>
+    <td><%= preventivo.tipo %></td>
+    <td><%= preventivo.descripcion %></td>
+    <td><%= preventivo.aviso_id %></td>
+    <td><%= link_to 'Show', preventivo %></td>
+    <td><%= link_to 'Edit', edit_preventivo_path(preventivo) %></td>
+    <td><%= link_to 'Destroy', preventivo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Preventivo', new_preventivo_path %>

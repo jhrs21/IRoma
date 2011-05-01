@@ -1,0 +1,37 @@
+<h1>Listing repuestos</h1>
+
+<table>
+  <tr>
+    <th>Serial</th>
+    <th>Nombre</th>
+    <th>F compra</th>
+    <th>Unitario</th>
+    <th>Cantidad</th>
+    <th>Precio</th>
+    <th>Vehiculo</th>
+    <th>Correctivo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @repuestos.each do |repuesto| %>
+  <tr>
+    <td><%= repuesto.serial %></td>
+    <td><%= repuesto.nombre %></td>
+    <td><%= repuesto.f_compra %></td>
+    <td><%= repuesto.unitario %></td>
+    <td><%= repuesto.cantidad %></td>
+    <td><%= repuesto.precio %></td>
+    <td><%= repuesto.vehiculo_id %></td>
+    <td><%= repuesto.correctivo_id %></td>
+    <td><%= link_to 'Show', repuesto %></td>
+    <td><%= link_to 'Edit', edit_repuesto_path(repuesto) %></td>
+    <td><%= link_to 'Destroy', repuesto, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Repuesto', new_repuesto_path %>

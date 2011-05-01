@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nro_planilla: 1
+  tipo: MyString
+  descripcion: MyText
+  aviso_id: 1
+
+two:
+  nro_planilla: 1
+  tipo: MyString
+  descripcion: MyText
+  aviso_id: 1

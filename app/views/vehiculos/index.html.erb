@@ -1,0 +1,33 @@
+<h1>Listing vehiculos</h1>
+
+<table>
+  <tr>
+    <th>Placa</th>
+    <th>Equipo</th>
+    <th>Ano</th>
+    <th>Denominacion</th>
+    <th>Central</th>
+    <th>Usuario</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vehiculos.each do |vehiculo| %>
+  <tr>
+    <td><%= vehiculo.placa %></td>
+    <td><%= vehiculo.equipo %></td>
+    <td><%= vehiculo.ano %></td>
+    <td><%= vehiculo.denominacion %></td>
+    <td><%= vehiculo.central_id %></td>
+    <td><%= vehiculo.usuario_id %></td>
+    <td><%= link_to 'Show', vehiculo %></td>
+    <td><%= link_to 'Edit', edit_vehiculo_path(vehiculo) %></td>
+    <td><%= link_to 'Destroy', vehiculo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vehiculo', new_vehiculo_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@aviso) do |f| %>
+  <% if @aviso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aviso.errors.count, "error") %> prohibited this aviso from being saved:</h2>
+
+      <ul>
+      <% @aviso.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nro_aviso %><br />
+    <%= f.text_field :nro_aviso %>
+  </div>
+  <div class="field">
+    <%= f.label :f_creacion %><br />
+    <%= f.datetime_select :f_creacion %>
+  </div>
+  <div class="field">
+    <%= f.label :f_cierre %><br />
+    <%= f.datetime_select :f_cierre %>
+  </div>
+  <div class="field">
+    <%= f.label :vehiculo_id %><br />
+    <%= f.text_field :vehiculo_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
